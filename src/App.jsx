@@ -5,11 +5,11 @@ import WeRent from "./components/WeRent";
 import Search from "./components/SearchBar";
 import TheFuture from "./components/TheFuture";
 import IdAliquam from "./components/IdAliquam";
+import Features from "./components/Features/Features";
 
 const BcgImage = styled.div`
   margin: auto;
   margin-bottom: 170px;
-  max-width: 1440px;
   height: 767px;
   background: url(../src/images/bcg.jpg);
   background-size: cover;
@@ -28,6 +28,7 @@ const App = () => {
       </BcgImage>
       <TheFuture />
       <IdAliquam />
+      <Features />
     </div>
   );
 };

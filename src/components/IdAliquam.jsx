@@ -20,6 +20,7 @@ const Text2 = styled.h5`
 const Container = styled.div`
   width: 847px;
   margin: 0 auto;
+  margin-bottom: 60px;
 `;
 
 const IdAliquam = () => {
