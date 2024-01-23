@@ -6,6 +6,7 @@ import Search from "./components/SearchBar";
 import TheFuture from "./components/TheFuture";
 import IdAliquam from "./components/IdAliquam";
 import Features from "./components/Features/Features";
+import Locations from "./components/Locations/Locations";
 
 const BcgImage = styled.div`
   margin: auto;
@@ -29,6 +30,7 @@ const App = () => {
       <TheFuture />
       <IdAliquam />
       <Features />
+      <Locations />
     </div>
   );
 };

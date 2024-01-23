@@ -13,13 +13,13 @@ margin-bottom: 140px;
 const Features = () => {
     const cardData = [
         {
-         iconSrc: '../src/images/eva_calendar-fill.svg',
+         iconSrc: '/src/images/eva_calendar-fill.svg',
          text1: 'Flexible living', 
          text2: 'Stay as Long or as little as you need with month-to-month contracts'
         },
 
         {
-         iconSrc: '../src/images/mdi_sofa.svg', 
+         iconSrc: '/src/images/mdi_sofa.svg', 
          text1: 'Move-in ready', 
          text2: 'Ready to move in with everything you need'
         },
