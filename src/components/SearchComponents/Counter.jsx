@@ -35,9 +35,9 @@ const Counter = () => {
 
   return (
     <Div>
-      <Icon onClick={Plus} src="../src/images/eva_plus-fill.svg" />
+      <Icon onClick={Plus} src="../src/assets/eva_plus-fill.svg" />
       <Span>{count}</Span>
-      <Icon onClick={Minus} src="../src/images/eva_minus-fill.svg" />
+      <Icon onClick={Minus} src="../src/assets/eva_minus-fill.svg" />
     </Div>
   );
 };

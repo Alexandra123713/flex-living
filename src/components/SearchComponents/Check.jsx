@@ -48,11 +48,11 @@ const Check = () => {
   return (
     <Div>
       <MoveIn onClick={handleCheckClick}>
-        <Icon src="../src/images/eva_calendar-fill.svg" />
+        <Icon src="../src/assets/eva_calendar-fill.svg" />
         <Text>Move-in</Text>
       </MoveIn>
       <MoveOut onClick={handleCheckClick}>
-        <Icon src="../src/images/eva_arrow-forward-fill.svg" />
+        <Icon src="../src/assets/eva_arrow-forward-fill.svg" />
         <Text>Move-out</Text>
       </MoveOut>
       <CalendarWrapper showcalendar={showCalendar}>

@@ -1,0 +1,21 @@
+.slick-arrow, .slick-prev, .slick-next {
+    all: initial;
+}
+
+.slick-arrow::before, .slick-prev::before, .slick-next::before {
+    all: initial;
+}
+.slick-arrow:hover, .slick-prev:hover, .slick-next:hover {
+    all: initial;
+}
+
+.slick-arrow:focus, .slick-prev:focus, .slick-next:focus {
+    all: initial;
+}
+
+.slick-arrow {
+    width: 42px;
+    height: 42px;
+    background-color: #064749;
+    border-radius: 12px;
+}

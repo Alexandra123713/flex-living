@@ -1,5 +1,7 @@
 import styled from "styled-components";
+
 import "./Select.css";
+import searchIcon from '../../assets/eva_search-outline.svg'
 
 const Div = styled.div`
   display: flex;
@@ -19,7 +21,7 @@ const Input = styled.input`
 const Select = () => {
   return (
     <Div>
-      <Icon src="../src/images/eva_search-outline.svg" />
+      <Icon src={searchIcon} alt ='searchIcon' />
       <Input type="text" placeholder="Select a city" />
     </Div>
   );

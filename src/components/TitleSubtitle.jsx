@@ -23,17 +23,13 @@ const Container = styled.div`
   margin-bottom: 60px;
 `;
 
-const IdAliquam = () => {
+const TitleSubtitle = ({text1, text2}) => {
   return (
     <Container>
-      <Text1>Id aliquam molestie nunc quis turpis imperdiet quis</Text1>
-      <Text2>
-        Euismod condimentum tempus quis nibh. Accumsan imperdiet non vulputate
-        venenatis, lorem amet, purus amet, sagittis. Cum orci quam enim
-        adipiscing interdum purus.
-      </Text2>
+      <Text1>{text1}</Text1>
+      <Text2>{text2}</Text2>
     </Container>
   );
 };
 
-export default IdAliquam;
+export default TitleSubtitle;

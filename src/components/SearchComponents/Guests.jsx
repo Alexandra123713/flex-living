@@ -24,7 +24,7 @@ const Guests = () => {
   return (
     <Div>
       <GuestsBox>
-        <Icon src="../src/images/eva_people-fill.svg" />
+        <Icon src="../src/assets/eva_people-fill.svg" />
         <Text>Guests</Text>
       </GuestsBox>
       <Counter />

@@ -10,7 +10,7 @@ const Nav = styled.nav`
 const Logo = styled.div`
   width: 130px;
   height: 58px;
-  background: url(../src/images/logo.png);
+  background: url(../src/assets/logo.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
