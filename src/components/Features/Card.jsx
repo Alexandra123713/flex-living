@@ -1,5 +1,15 @@
 import styled from "styled-components";
 
+export const Card = ({ iconSrc, text1, text2 }) => {
+  return (
+    <CardContainer>
+      <img src={iconSrc} alt="Icon" />
+      <Text1>{text1}</Text1>
+      <Text2>{text2}</Text2>
+    </CardContainer>
+  );
+};
+
 const CardContainer = styled.div`
   color: #181a18;
   display: flex;
@@ -24,15 +34,3 @@ const Text2 = styled.div`
   line-height: 20px;
   padding-right: 29px;
 `;
-
-const Card = ({ iconSrc, text1, text2 }) => {
-  return (
-    <CardContainer>
-      <img src={iconSrc} alt="Icon" />
-      <Text1>{text1}</Text1>
-      <Text2>{text2}</Text2>
-    </CardContainer>
-  );
-};
-
-export default Card;

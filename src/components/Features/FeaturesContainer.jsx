@@ -1,13 +1,20 @@
 import styled from "styled-components";
-import Card from "./Card";
+import { Card } from "./Card";
 
-const Container = styled.div`
-  display: flex;
-  gap: 20px;
-  width: 1280px;
-  margin: 0 auto;
-  margin-bottom: 140px;
-`;
+export const FeaturesContainer = () => {
+  return (
+    <Container>
+      {cardData.map((data, index) => (
+        <Card
+          key={index}
+          iconSrc={data.iconSrc}
+          text1={data.text1}
+          text2={data.text2}
+        />
+      ))}
+    </Container>
+  );
+};
 
 const cardData = [
   {
@@ -36,19 +43,10 @@ const cardData = [
   },
 ];
 
-const FeaturesContainer = () => {
-  return (
-    <Container>
-      {cardData.map((data, index) => (
-        <Card
-          key={index}
-          iconSrc={data.iconSrc}
-          text1={data.text1}
-          text2={data.text2}
-        />
-      ))}
-    </Container>
-  );
-};
-
-export default FeaturesContainer;
+const Container = styled.div`
+  display: flex;
+  gap: 20px;
+  width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 140px;
+`;

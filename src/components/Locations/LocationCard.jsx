@@ -1,5 +1,16 @@
 import styled from "styled-components";
 
+export const LocationCard = ({ location, imgSrc }) => {
+  return (
+    <Container>
+      <Location>{location}</Location>
+      <ImageContainer>
+        <Image src={imgSrc} alt="Image" />
+      </ImageContainer>
+    </Container>
+  );
+};
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -27,16 +38,3 @@ const Image = styled.img`
   left: 50%;
   transform: translate(-50%, -50%);
 `;
-
-const LocationCard = ({ location, imgSrc }) => {
-  return (
-    <Container>
-      <Location>{location}</Location>
-      <ImageContainer>
-        <Image src={imgSrc} alt="Image" />
-      </ImageContainer>
-    </Container>
-  );
-};
-
-export default LocationCard;

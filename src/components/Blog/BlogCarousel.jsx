@@ -1,14 +1,11 @@
-import { TestimonialCard } from "./TestimonialCard";
-import { testimonialData } from "../../constants";
-import { useState } from "react";
+import { blogData } from "../../constants";
+import { BlogCard } from "./BlogCard";
 import Carousel from "react-simply-carousel";
-import "./carousel.css";
-import { ArrowRight } from "./Arrows";
-import { ArrowLeft } from "./Arrows";
+import { useState } from "react";
+import "../Testimonials/carousel.css";
 
-export const Testimonials = () => {
+export const BlogCarousel = () => {
   const [activeSlide, setActiveSlide] = useState(0);
-
   return (
     <Carousel
       containerProps={{
@@ -16,44 +13,42 @@ export const Testimonials = () => {
           width: "100%",
           justifyContent: "space-between",
           userSelect: "none",
+          overscrollBehavior: "contain",
+          marginBottom: "60px",
         },
       }}
-      preventScrollOnSwipe
-      swipeTreshold={60}
+      preventScrollOnSwipe={true}
+      swipeTreshold={250}
       activeSlideIndex={activeSlide}
       onRequestChange={setActiveSlide}
       forwardBtnProps={{
-        children: <ArrowLeft />,
         style: {
-          width: 60,
-          height: 60,
-          minWidth: 60,
+          width: "50%",
+          height: "604px",
           alignSelf: "center",
         },
       }}
       backwardBtnProps={{
-        children: <ArrowRight />,
         style: {
-          width: 60,
-          height: 60,
-          minWidth: 60,
+          width: "50%",
+          height: "604px",
           alignSelf: "center",
         },
       }}
       dotsNav={{
         show: false,
       }}
-      itemsToShow={2}
+      itemsToShow={5}
       speed={400}
       centerMode
     >
-      {testimonialData.map((data) => (
-        <TestimonialCard
+      {blogData.map((data) => (
+        <BlogCard
           key={data.id}
           photoSrc={data.photoSrc}
-          name={data.name}
-          text1={data.text1}
-          text2={data.text2}
+          title={data.title}
+          text={data.text}
+          time={data.time}
         />
       ))}
     </Carousel>

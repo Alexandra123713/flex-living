@@ -1,5 +1,20 @@
 import styled from "styled-components";
-import Button from "./Button";
+import { Button } from "./Button";
+
+export const Bespoke = () => {
+  return (
+    <Bcg>
+      <Container>
+        <Text1>Bespoke spaces</Text1>
+        <Text2>
+          Expertly designed to create extraordinary spaces with the flexible
+          renter in mind
+        </Text2>
+        <Button text="Start booking" />
+      </Container>
+    </Bcg>
+  );
+};
 
 const Bcg = styled.div`
   background: url("../src/assets/bcg_2.png");
@@ -25,7 +40,7 @@ const Bcg = styled.div`
   }
 `;
 const Container = styled.div`
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
   z-index: 1;
   position: relative;
@@ -45,20 +60,3 @@ const Text2 = styled.h5`
   margin: 0;
   margin-bottom: 60px;
 `;
-
-const Bespoke = () => {
-  return (
-    <Bcg>
-      <Container>
-        <Text1>Bespoke spaces</Text1>
-        <Text2>
-          Expertly designed to create extraordinary spaces with the flexible
-          renter in mind
-        </Text2>
-        <Button text="Start booking" />
-      </Container>
-    </Bcg>
-  );
-};
-
-export default Bespoke;

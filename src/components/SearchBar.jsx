@@ -1,8 +1,21 @@
 import styled from "styled-components";
-import Select from "./SearchComponents/Select";
-import Check from "./SearchComponents/Check";
-import Guests from "./SearchComponents/Guests";
-import Button from "./Button";
+import { Select } from "./SearchComponents/Select";
+import { Check } from "./SearchComponents/Check";
+import { Guests } from "./SearchComponents/Guests";
+import { Button } from "./Button";
+
+export const Search = () => {
+  return (
+    <SearchContainer>
+      <Select />
+      <Line />
+      <Check />
+      <Line />
+      <Guests />
+      <Button text="Search" />
+    </SearchContainer>
+  );
+};
 
 const SearchContainer = styled.div`
   display: flex;
@@ -24,18 +37,3 @@ const Line = styled.div`
   height: 48px;
   background: #49735a;
 `;
-
-const Search = () => {
-  return (
-    <SearchContainer>
-      <Select />
-      <Line />
-      <Check />
-      <Line />
-      <Guests />
-      <Button text="Search" />
-    </SearchContainer>
-  );
-};
-
-export default Search;

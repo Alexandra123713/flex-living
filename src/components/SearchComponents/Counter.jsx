@@ -1,24 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-const Div = styled.div`
-  display: flex;
-  gap: 8px;
-`;
-
-const Icon = styled.img`
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-`;
-
-const Span = styled.span`
-  font-size: 18px;
-  font-weight: 700;
-  color: #181a18;
-`;
-
-const Counter = () => {
+export const Counter = () => {
   const [count, setCount] = useState(1);
 
   const Plus = () => {
@@ -42,4 +25,19 @@ const Counter = () => {
   );
 };
 
-export default Counter;
+const Div = styled.div`
+  display: flex;
+  gap: 8px;
+`;
+
+const Icon = styled.img`
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+`;
+
+const Span = styled.span`
+  font-size: 18px;
+  font-weight: 700;
+  color: #181a18;
+`;

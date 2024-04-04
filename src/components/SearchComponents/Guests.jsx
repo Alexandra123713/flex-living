@@ -1,5 +1,17 @@
 import styled from "styled-components";
-import Counter from "./Counter";
+import { Counter } from "./Counter";
+
+export const Guests = () => {
+  return (
+    <Div>
+      <GuestsBox>
+        <Icon src="../src/assets/eva_people-fill.svg" />
+        <Text>Guests</Text>
+      </GuestsBox>
+      <Counter />
+    </Div>
+  );
+};
 
 const Div = styled.div`
   display: flex;
@@ -19,17 +31,3 @@ const Text = styled.span`
   font-weight: 700;
   color: #181a18;
 `;
-
-const Guests = () => {
-  return (
-    <Div>
-      <GuestsBox>
-        <Icon src="../src/assets/eva_people-fill.svg" />
-        <Text>Guests</Text>
-      </GuestsBox>
-      <Counter />
-    </Div>
-  );
-};
-
-export default Guests;

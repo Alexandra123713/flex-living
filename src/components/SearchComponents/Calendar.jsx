@@ -6,7 +6,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./Calendar.css";
 
-const Calendar = () => {
+export const Calendar = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(null);
   const minSelectableDate = new Date();
@@ -29,5 +29,3 @@ const Calendar = () => {
     />
   );
 };
-
-export default Calendar;

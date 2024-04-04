@@ -1,23 +1,10 @@
 import styled from "styled-components";
-import LocationCard from "./LocationCard";
-import Button from "../Button";
-import TitleSubtitle from "../TitleSubtitle";
+import { LocationCard } from "./LocationCard";
+import { Button } from "../Button";
+import { TitleSubtitle } from "../TitleSubtitle";
 import { locationData } from "../../constants";
 
-const CardContainer = styled.div`
-  width: 1280px;
-  margin: 0 auto;
-  display: flex;
-  gap: 20px;
-  align-items: end;
-`;
-const View = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-bottom: 152px;
-`;
-
-const Locations = () => {
+export const Locations = () => {
   return (
     <div>
       <TitleSubtitle text1="Choose your location" />
@@ -37,4 +24,15 @@ const Locations = () => {
   );
 };
 
-export default Locations;
+const CardContainer = styled.div`
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  align-items: end;
+`;
+const View = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 152px;
+`;

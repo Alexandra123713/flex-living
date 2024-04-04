@@ -1,5 +1,20 @@
 import styled from "styled-components";
 
+export const TestimonialCard = ({ photoSrc, name, text1, text2 }) => {
+  return (
+    <CardContainer>
+      <PersonBox>
+        <Photo src={photoSrc} alt="Photo" />
+        <NameBox>
+          <Name>{name}</Name>
+          <Text1>{text1}</Text1>
+        </NameBox>
+      </PersonBox>
+      <Text2>{text2}</Text2>
+    </CardContainer>
+  );
+};
+
 const CardContainer = styled.div`
   padding: 60px;
   border-radius: 60px 60px 60px 12px;
@@ -35,20 +50,3 @@ const Text2 = styled.div`
   font-size: 18px;
   font-weight: 400;
 `;
-
-const TestimonialCard = ({ photoSrc, name, text1, text2 }) => {
-  return (
-    <CardContainer>
-      <PersonBox>
-        <Photo src={photoSrc} alt="Photo" />
-        <NameBox>
-          <Name>{name}</Name>
-          <Text1>{text1}</Text1>
-        </NameBox>
-      </PersonBox>
-      <Text2>{text2}</Text2>
-    </CardContainer>
-  );
-};
-
-export default TestimonialCard;

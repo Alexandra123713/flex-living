@@ -1,5 +1,17 @@
 import styled from "styled-components";
 
+export const WeRent = () => {
+  return (
+    <Card>
+      <Text1>We rent your property</Text1>
+      <Text2>
+        Vel mattis integer pulvinar morbi quis amet eu. In nunc facilisis proin
+        fermentum, consectetur cursus.
+      </Text2>
+    </Card>
+  );
+};
+
 const Card = styled.div`
   padding: 60px 80px;
   display: flex;
@@ -26,17 +38,3 @@ const Text2 = styled.h5`
   font-weight: 400;
   color: #181a18;
 `;
-
-const WeRent = () => {
-  return (
-    <Card>
-      <Text1>We rent your property</Text1>
-      <Text2>
-        Vel mattis integer pulvinar morbi quis amet eu. In nunc facilisis proin
-        fermentum, consectetur cursus.
-      </Text2>
-    </Card>
-  );
-};
-
-export default WeRent;

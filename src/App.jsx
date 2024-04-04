@@ -1,4 +1,4 @@
-import { Home } from "./pages";
+import { Home } from "./pages/home";
 
 const App = () => {
   return <Home />;

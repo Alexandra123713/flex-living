@@ -1,6 +1,31 @@
 import styled from "styled-components";
 import { useState } from "react";
-import Calendar from "./Calendar";
+import { Calendar } from "./Calendar";
+
+export const Check = () => {
+  const [showCalendar, setShowCalendar] = useState(false);
+  console.log(showCalendar);
+
+  const handleCheckClick = () => {
+    setShowCalendar(!showCalendar);
+  };
+
+  return (
+    <Div>
+      <MoveIn onClick={handleCheckClick}>
+        <Icon src="../src/assets/eva_calendar-fill.svg" />
+        <Text>Move-in</Text>
+      </MoveIn>
+      <MoveOut onClick={handleCheckClick}>
+        <Icon src="../src/assets/eva_arrow-forward-fill.svg" />
+        <Text>Move-out</Text>
+      </MoveOut>
+      <CalendarWrapper showcalendar={showCalendar}>
+        <Calendar />
+      </CalendarWrapper>
+    </Div>
+  );
+};
 
 const Div = styled.div`
   display: flex;
@@ -36,30 +61,3 @@ const CalendarWrapper = styled.div`
   left: -100%;
   transform: translate(-50%, 50%);
 `;
-
-const Check = () => {
-  const [showCalendar, setShowCalendar] = useState(false);
-  console.log(showCalendar);
-
-  const handleCheckClick = () => {
-    setShowCalendar(!showCalendar);
-  };
-
-  return (
-    <Div>
-      <MoveIn onClick={handleCheckClick}>
-        <Icon src="../src/assets/eva_calendar-fill.svg" />
-        <Text>Move-in</Text>
-      </MoveIn>
-      <MoveOut onClick={handleCheckClick}>
-        <Icon src="../src/assets/eva_arrow-forward-fill.svg" />
-        <Text>Move-out</Text>
-      </MoveOut>
-      <CalendarWrapper showcalendar={showCalendar}>
-        <Calendar />
-      </CalendarWrapper>
-    </Div>
-  );
-};
-
-export default Check;

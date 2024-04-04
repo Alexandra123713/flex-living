@@ -1,15 +1,7 @@
 import styled from "styled-components";
-import Card from "../Features/Card";
+import { Card } from "../Features/Card";
 
-const Container = styled.div`
-  display: flex;
-  gap: 20px;
-  width: 1280px;
-  margin: 0 auto;
-  margin-bottom: 140px;
-`;
-
-const PartnershipContainer = () => {
+export const PartnershipContainer = () => {
   const cardData = [
     {
       iconSrc: "src/assets/eva_search-outline.svg",
@@ -43,4 +35,10 @@ const PartnershipContainer = () => {
   );
 };
 
-export default PartnershipContainer;
+const Container = styled.div`
+  display: flex;
+  gap: 20px;
+  width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 140px;
+`;

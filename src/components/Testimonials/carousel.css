@@ -1,21 +1,42 @@
-.slick-arrow, .slick-prev, .slick-next {
-    all: initial;
-}
 
-.slick-arrow::before, .slick-prev::before, .slick-next::before {
-    all: initial;
-}
-.slick-arrow:hover, .slick-prev:hover, .slick-next:hover {
-    all: initial;
-}
+#root > div > div:nth-child(11) > div > div {
+    gap: 60px;
 
-.slick-arrow:focus, .slick-prev:focus, .slick-next:focus {
-    all: initial;
 }
-
-.slick-arrow {
-    width: 42px;
-    height: 42px;
-    background-color: #064749;
+#root > div > div:nth-child(11) > button:nth-child(1), #root > div > div:nth-child(11) > button:nth-child(3) {
     border-radius: 12px;
+    background: #064749;
+    border: none;
+}
+
+#root > div > div:nth-child(11) > button:nth-child(1) {
+    order: 2;
+}
+
+#root > div > div:nth-child(11) > div, #root > div > div:nth-child(12) > div > div {
+    max-width: none !important;
+}
+
+#root > div > div:nth-child(11){
+    justify-content: center !important;
+    column-gap: 40px;
+    row-gap: 60px;
+    margin-bottom: 140px;
+}
+
+#root > div > div:nth-child(12) > div > div > div{
+    gap: 20px;
+    position: relative;
+}
+
+#root > div > div:nth-child(12) > div > button:nth-child(1), #root > div > div:nth-child(12) > div > button:nth-child(3){
+    display: none;
+    position: absolute;
+    z-index: 1;
+    border: none;
+    background-color: transparent;
+    pointer-events: none;
+}
+#root > div > div:nth-child(12) > div > button:nth-child(3){
+    right: 0;
 }

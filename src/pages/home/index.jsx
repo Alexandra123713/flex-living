@@ -1,14 +1,19 @@
-import Navbar from "../../components/Nav";
-import WeRent from "../../components/WeRent";
-import Search from "../../components/SearchBar";
-import TheFuture from "../../components/TheFuture";
-import TitleSubtitle from "../../components/TitleSubtitle";
-import FeaturesContainer from "../../components/Features/FeaturesContainer";
-import Locations from "../../components/Locations/Locations";
-import Bespoke from "../../components/Bespoke";
-import PartnershipContainer from "../../components/Partnerships/PartnershipContainer";
+import { Navbar } from "../../components/Nav";
+import { WeRent } from "../../components/WeRent";
+import { Search } from "../../components/SearchBar";
+import { TheFuture } from "../../components/TheFuture";
+import { TitleSubtitle } from "../../components/TitleSubtitle";
+import { FeaturesContainer } from "../../components/Features/FeaturesContainer";
+import { Locations } from "../../components/Locations/Locations";
+import { Bespoke } from "../../components/Bespoke";
+import { PartnershipContainer } from "../../components/Partnerships/PartnershipContainer";
 import { Testimonials } from "../../components/Testimonials/Testimonials";
 import { BcgImage } from "./styles";
+import { Blog } from "../../components/Blog/Blog";
+import { Button } from "../../components/Button";
+import { Links } from "../../components/Links/Links";
+import { Dictum } from "../../components/Dictum/Dictum";
+import { Footer } from "../../components/Footer/Footer";
 
 export const Home = () => {
   return (
@@ -37,6 +42,19 @@ export const Home = () => {
         text2="See what our partners say about us"
       />
       <Testimonials />
+      <Blog />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: "140px",
+        }}
+      >
+        <Button text="Read more" />
+      </div>
+      <Links />
+      <Dictum />
+      <Footer />
     </div>
   );
 };

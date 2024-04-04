@@ -1,21 +1,20 @@
 import styled from "styled-components";
 
-export const TitleSubtitle = ({ text1, text2 }) => {
+export const TitleSubtitleInsideBox = ({ text1, text2 }) => {
   return (
-    <Container>
+    <div>
       <Text1>{text1}</Text1>
       <Text2>{text2}</Text2>
-    </Container>
+    </div>
   );
 };
 
 const Text1 = styled.h3`
-  font-size: 48px;
   font-weight: 700;
+  font-size: 52px;
   color: #181a18;
   margin: 0;
-  text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 `;
 
 const Text2 = styled.h5`
@@ -23,11 +22,4 @@ const Text2 = styled.h5`
   font-weight: 400;
   color: #181a18;
   margin: 0;
-  text-align: center;
-`;
-
-const Container = styled.div`
-  width: 847px;
-  margin: 0 auto;
-  margin-bottom: 60px;
 `;
