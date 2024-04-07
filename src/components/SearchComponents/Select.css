@@ -1,9 +1,0 @@
-input::placeholder {
-  font-size: 18px;
-  font-weight: 700;
-  color: #181a18;
-}
-input[type="text" i] {
-  padding-block: 2px;
-  padding-inline: 2px;
-}

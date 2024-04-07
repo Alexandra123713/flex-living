@@ -74,13 +74,11 @@ const Image = styled.div`
 const Title = styled.div`
   font-weight: 700;
   font-size: 36px;
-  color: #181a18;
 `;
 
 const Text = styled.div`
   font-weight: 400;
   font-size: 16px;
-  color: #181a18;
 `;
 
 const Icon = styled.img`
@@ -91,5 +89,4 @@ const Icon = styled.img`
 const Time = styled.div`
   font-weight: 700;
   font-size: 24px;
-  color: #181a18;
 `;

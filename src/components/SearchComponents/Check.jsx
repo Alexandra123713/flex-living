@@ -51,7 +51,6 @@ const Icon = styled.img`
 const Text = styled.span`
   font-size: 18px;
   font-weight: 700;
-  color: #181a18;
 `;
 
 const CalendarWrapper = styled.div`

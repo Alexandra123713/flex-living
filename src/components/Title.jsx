@@ -17,7 +17,6 @@ const Container = styled.div`
 const Text = styled.h3`
   font-size: 48px;
   font-weight: 700;
-  color: #181a18;
   margin: 0;
   text-align: center;
 `;

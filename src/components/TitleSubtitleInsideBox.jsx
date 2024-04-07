@@ -12,7 +12,6 @@ export const TitleSubtitleInsideBox = ({ text1, text2 }) => {
 const Text1 = styled.h3`
   font-weight: 700;
   font-size: 52px;
-  color: #181a18;
   margin: 0;
   margin-bottom: 24px;
 `;
@@ -20,6 +19,5 @@ const Text1 = styled.h3`
 const Text2 = styled.h5`
   font-size: 18px;
   font-weight: 400;
-  color: #181a18;
   margin: 0;
 `;

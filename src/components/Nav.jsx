@@ -60,6 +60,5 @@ const MenuItem = styled.li`
 const NavLink = styled.div`
   text-decoration: none;
   font-size: 18px;
-  color: #181a18;
   cursor: pointer;
 `;

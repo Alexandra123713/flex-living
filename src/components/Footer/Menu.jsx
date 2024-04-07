@@ -30,9 +30,9 @@ const MenuContainer = styled.div`
   justify-content: space-around;
 `;
 const MenuItem = styled.a`
+  color: #181a18;
   font-weight: 400;
   font-size: 18px;
-  color: #181a18;
   text-decoration: none;
   &:first-child {
     font-weight: 700;

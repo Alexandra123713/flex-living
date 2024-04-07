@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const Card = ({ iconSrc, text1, text2 }) => {
+export const Card = ({ iconSrc, text1, text2, color }) => {
   return (
-    <CardContainer>
+    <CardContainer style={{ backgroundColor: color }}>
       <img src={iconSrc} alt="Icon" />
       <Text1>{text1}</Text1>
       <Text2>{text2}</Text2>
@@ -10,15 +10,13 @@ export const Card = ({ iconSrc, text1, text2 }) => {
   );
 };
 
-const CardContainer = styled.div`
-  color: #181a18;
+export const CardContainer = styled.div`
   display: flex;
   width: 100%;
   padding: 32px 40px;
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
-  background-color: #e2f1e8;
   border-radius: 30px;
 `;
 

@@ -2,7 +2,7 @@ import { TestimonialCard } from "./TestimonialCard";
 import { testimonialData } from "../../constants";
 import { useState } from "react";
 import Carousel from "react-simply-carousel";
-import "./carousel.css";
+// import "./carousel.css";
 import { ArrowRight } from "./Arrows";
 import { ArrowLeft } from "./Arrows";
 
@@ -11,11 +11,19 @@ export const Testimonials = () => {
 
   return (
     <Carousel
+      itemsListProps={{
+        style: {
+          gap: "60px",
+          marginBottom: "20px",
+        },
+      }}
       containerProps={{
         style: {
           width: "100%",
-          justifyContent: "space-between",
+          justifyContent: "center",
           userSelect: "none",
+          gap: "40px",
+          marginBottom: "140px",
         },
       }}
       preventScrollOnSwipe
@@ -29,6 +37,9 @@ export const Testimonials = () => {
           height: 60,
           minWidth: 60,
           alignSelf: "center",
+          borderRadius: "12px",
+          background: " #064749",
+          border: "none",
         },
       }}
       backwardBtnProps={{
@@ -38,6 +49,10 @@ export const Testimonials = () => {
           height: 60,
           minWidth: 60,
           alignSelf: "center",
+          borderRadius: "12px",
+          background: " #064749",
+          border: "none",
+          order: 2,
         },
       }}
       dotsNav={{

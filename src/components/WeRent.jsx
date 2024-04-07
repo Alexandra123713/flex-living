@@ -28,7 +28,6 @@ const Text1 = styled.h2`
   margin: 0;
   width: 325px;
   font-weight: 700;
-  color: #181a18;
 `;
 
 const Text2 = styled.h5`
@@ -36,5 +35,4 @@ const Text2 = styled.h5`
   margin: 0;
   width: 325px;
   font-weight: 400;
-  color: #181a18;
 `;

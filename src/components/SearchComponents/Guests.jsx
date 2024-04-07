@@ -29,5 +29,4 @@ const GuestsBox = styled.div`
 const Text = styled.span`
   font-size: 18px;
   font-weight: 700;
-  color: #181a18;
 `;

@@ -1,35 +1,36 @@
 
-#root > div > div:nth-child(11) > div > div {
+#root > div > div:nth-child(2) > div:nth-child(10) > div > div {
     gap: 60px;
 
 }
-#root > div > div:nth-child(11) > button:nth-child(1), #root > div > div:nth-child(11) > button:nth-child(3) {
+
+#root > div > div:nth-child(2) > div:nth-child(10) > button:nth-child(1), #root > div > div:nth-child(2) > div:nth-child(10) > button:nth-child(3) {
     border-radius: 12px;
     background: #064749;
     border: none;
 }
 
-#root > div > div:nth-child(11) > button:nth-child(1) {
+#root > div > div:nth-child(2) > div:nth-child(10) > button:nth-child(1) {
     order: 2;
 }
 
-#root > div > div:nth-child(11) > div, #root > div > div:nth-child(12) > div > div {
+#root > div > div:nth-child(2) > div:nth-child(10) > div, #root >  div >div > div:nth-child(12) > div > div {
     max-width: none !important;
 }
 
-#root > div > div:nth-child(11){
+#root > div > div:nth-child(2) > div:nth-child(10){
     justify-content: center !important;
     column-gap: 40px;
     row-gap: 60px;
     margin-bottom: 140px;
 }
 
-#root > div > div:nth-child(12) > div > div > div{
+#root >  div >div > div:nth-child(12) > div > div > div{
     gap: 20px;
     position: relative;
 }
 
-#root > div > div:nth-child(12) > div > button:nth-child(1), #root > div > div:nth-child(12) > div > button:nth-child(3){
+#root >  div >div > div:nth-child(12) > div > button:nth-child(1), #root >  div >div > div:nth-child(12) > div > button:nth-child(3){
     display: none;
     position: absolute;
     z-index: 1;
@@ -37,6 +38,6 @@
     background-color: transparent;
     pointer-events: none;
 }
-#root > div > div:nth-child(12) > div > button:nth-child(3){
+#root >  div >div > div:nth-child(12) > div > button:nth-child(3){
     right: 0;
 }

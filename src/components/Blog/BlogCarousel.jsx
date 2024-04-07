@@ -2,12 +2,16 @@ import { blogData } from "../../constants";
 import { BlogCard } from "./BlogCard";
 import Carousel from "react-simply-carousel";
 import { useState } from "react";
-import "../Testimonials/carousel.css";
 
 export const BlogCarousel = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   return (
     <Carousel
+      itemsListProps={{
+        style: {
+          gap: "20px",
+        },
+      }}
       containerProps={{
         style: {
           width: "100%",
@@ -23,16 +27,12 @@ export const BlogCarousel = () => {
       onRequestChange={setActiveSlide}
       forwardBtnProps={{
         style: {
-          width: "50%",
-          height: "604px",
-          alignSelf: "center",
+          display: "none",
         },
       }}
       backwardBtnProps={{
         style: {
-          width: "50%",
-          height: "604px",
-          alignSelf: "center",
+          display: "none",
         },
       }}
       dotsNav={{

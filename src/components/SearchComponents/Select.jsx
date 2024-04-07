@@ -1,11 +1,23 @@
 import styled from "styled-components";
 import { locationData } from "../../constants";
-import "./Select.css";
 import searchIcon from "../../assets/eva_search-outline.svg";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export const Select = () => {
   const [value, setValue] = useState("");
+  const resultsRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (resultsRef.current && !resultsRef.current.contains(event.target)) {
+      setValue("");
+    }
+  };
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
   const filteredLocations = locationData.filter((location) => {
     return location.location.toLowerCase().includes(value.toLocaleLowerCase());
@@ -25,12 +37,14 @@ export const Select = () => {
       {Boolean(value) && (
         <>
           {filteredLocations.length > 0 ? (
-            <Results>
+            <Results ref={resultsRef}>
               {filteredLocations.map((location, index) => {
                 return (
                   <Result
                     key={index}
-                    onClick={() => setValue(location.location)}
+                    onClick={() => {
+                      setValue(location.location);
+                    }}
                   >
                     {location.location}
                   </Result>
@@ -38,7 +52,7 @@ export const Select = () => {
               })}
             </Results>
           ) : (
-            <Results>
+            <Results ref={resultsRef}>
               <Result>No data</Result>
             </Results>
           )}
@@ -65,6 +79,12 @@ const Input = styled.input`
   outline: none;
   border: none;
   width: 97px;
+  &::placeholder {
+    font-size: 18px;
+    font-weight: 700;
+    color: #181a18;
+    align-items: center;
+  }
 `;
 const Results = styled.div`
   position: absolute;
@@ -72,6 +92,8 @@ const Results = styled.div`
   background: white;
   border-radius: 12px;
   padding: 20px 40px;
+  box-shadow: 2px 2px 6px 0 rgba(175, 175, 175, 0.25);
+  top: 50px;
 `;
 const Result = styled.div`
   white-space: nowrap;

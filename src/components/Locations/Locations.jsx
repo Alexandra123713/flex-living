@@ -25,7 +25,7 @@ export const Locations = () => {
 };
 
 const CardContainer = styled.div`
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
   display: flex;
   gap: 20px;

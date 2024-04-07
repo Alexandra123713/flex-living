@@ -12,7 +12,6 @@ export const TitleSubtitle = ({ text1, text2 }) => {
 const Text1 = styled.h3`
   font-size: 48px;
   font-weight: 700;
-  color: #181a18;
   margin: 0;
   text-align: center;
   margin-bottom: 16px;
@@ -21,7 +20,6 @@ const Text1 = styled.h3`
 const Text2 = styled.h5`
   font-size: 18px;
   font-weight: 400;
-  color: #181a18;
   margin: 0;
   text-align: center;
 `;

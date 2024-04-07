@@ -1,7 +1,6 @@
-import { Navbar } from "../../components/Nav";
 import { WeRent } from "../../components/WeRent";
 import { Search } from "../../components/SearchBar";
-import { TheFuture } from "../../components/TheFuture";
+import { TheFuture } from "./TheFuture";
 import { TitleSubtitle } from "../../components/TitleSubtitle";
 import { FeaturesContainer } from "../../components/Features/FeaturesContainer";
 import { Locations } from "../../components/Locations/Locations";
@@ -13,12 +12,10 @@ import { Blog } from "../../components/Blog/Blog";
 import { Button } from "../../components/Button";
 import { Links } from "../../components/Links/Links";
 import { Dictum } from "../../components/Dictum/Dictum";
-import { Footer } from "../../components/Footer/Footer";
 
 export const Home = () => {
   return (
     <div>
-      <Navbar />
       <BcgImage>
         <WeRent />
         <Search />
@@ -54,7 +51,6 @@ export const Home = () => {
       </div>
       <Links />
       <Dictum />
-      <Footer />
     </div>
   );
 };

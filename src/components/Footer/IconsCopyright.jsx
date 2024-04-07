@@ -18,7 +18,6 @@ export const IconsCopyright = () => {
 };
 
 const Contact = styled.div`
-  color: #181a18;
   font-weight: 400;
   font-size: 16px;
   margin-bottom: 20px;
@@ -29,7 +28,6 @@ const Icons = styled.div`
   margin-bottom: 12px;
 `;
 const Copyright = styled.div`
-  color: #181a18;
   font-weight: 400;
   font-size: 16px;
 `;

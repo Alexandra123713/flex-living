@@ -10,6 +10,7 @@ export const FeaturesContainer = () => {
           iconSrc={data.iconSrc}
           text1={data.text1}
           text2={data.text2}
+          color="#e2f1e8"
         />
       ))}
     </Container>
@@ -46,7 +47,7 @@ const cardData = [
 const Container = styled.div`
   display: flex;
   gap: 20px;
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
   margin-bottom: 140px;
 `;

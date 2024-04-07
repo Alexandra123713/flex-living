@@ -146,3 +146,10 @@ export const locationData = [
     },
   ]
 
+
+
+  export const mediaWidths = {
+    small: 769,
+    medium: 1200,
+    large: 1600,
+  }
