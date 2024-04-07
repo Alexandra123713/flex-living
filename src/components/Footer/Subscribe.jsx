@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Field, Form } from "formik";
 import styled from "styled-components";
+import { Button } from "../Button";
 
 export const Subscribe = () => (
   <div>
@@ -19,10 +20,10 @@ export const Subscribe = () => (
         <StyledField
           id="email"
           name="email"
-          placeholder="Email adress"
+          placeholder="Email address"
           type="email"
         />
-        <SubscribeButton type="submit">Subscribe</SubscribeButton>
+        <SubscribeButton type="submit" text="Subscribe" />
       </StyledForm>
     </Formik>
   </div>
@@ -38,15 +39,8 @@ const StayUp = styled.div`
   }
 `;
 
-const SubscribeButton = styled.button`
-  border-radius: 40px;
-  background: #064749;
-  border: none;
-  padding: 12px 40px;
-  color: #fff;
-  font-size: 18px;
+const SubscribeButton = styled(Button)`
   width: 158px;
-  height: 48px;
 `;
 const StyledField = styled(Field)`
   border-radius: 12px;

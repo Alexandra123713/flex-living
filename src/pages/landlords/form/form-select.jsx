@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import Select, { components } from "react-select";
-import React, { useState } from "react";
-import { locationData } from "../../../constants";
+import React from "react";
+
 import arrowIcon from "../../../assets/eva_arrow-down-fill.svg";
 
 const DropdownIndicator = (props) => {
@@ -14,19 +14,13 @@ const DropdownIndicator = (props) => {
   );
 };
 
-export const FormSelect = ({ placeholder, options }) => {
-  const [selectedOption, setSelectedOption] = useState(null);
-
-  const handleChange = (selectedOption) => {
-    setSelectedOption(selectedOption);
-  };
-
+export const FormSelect = ({ placeholder, options, onChange, value }) => {
   return (
     <FormContainer>
       <Select
         components={{ DropdownIndicator }}
-        value={selectedOption}
-        onChange={handleChange}
+        value={value}
+        onChange={onChange}
         placeholder={placeholder}
         options={options}
         styles={{

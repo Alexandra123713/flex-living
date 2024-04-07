@@ -1,9 +1,11 @@
 import styled from "styled-components";
-import bcgImage from "../../../assets/bcg_image__form.png";
 import { Formik, Field, Form } from "formik";
-import Select, { components } from "react-select";
+
+import bcgImage from "../../../assets/bcg_image__form.png";
 import { FormSelect } from "./form-select";
 import { locationData } from "../../../constants";
+import { regions } from "./constants";
+import { Button } from "../../../components/Button";
 
 export const LandloardsForm = () => {
   return (
@@ -29,60 +31,67 @@ export const LandloardsForm = () => {
               alert(JSON.stringify(values, null, 2));
             }}
           >
-            <StyledForm>
-              <StyledField
-                id="name"
-                name="name"
-                placeholder="Name *"
-                type="text"
-              />
-              <StyledField
-                id="email"
-                name="email"
-                placeholder="Email *"
-                type="email"
-              />
-              <StyledField
-                id="number"
-                name="number"
-                placeholder="Phone number *"
-                type="tel"
-              />
-              <Details>Property details</Details>
-              <DetailsContainer>
-                <FormSelect
-                  id="city"
-                  name="city"
-                  placeholder="City *"
-                  options={locationData.map((data) => ({
-                    value: data.location,
-                    label: data.location,
-                  }))}
-                />
-                <FormSelect
-                  id="area"
-                  name="area"
-                  placeholder="Area *"
-                  options={locationData.map((data) => ({
-                    value: data.location,
-                    label: data.location,
-                  }))}
-                />
-              </DetailsContainer>
-              <FormSelect
-                id="bedrooms"
-                name="bedrooms"
-                placeholder="# of bedrooms *"
-                options={[
-                  { value: 1, label: "1 bedroom" },
-                  { value: 2, label: "2 bedrooms" },
-                  { value: 3, label: "3 bedrooms" },
-                  { value: 4, label: "4 bedrooms" },
-                  { value: 5, label: "5 bedrooms" },
-                ]}
-              />
-              <SubmitButton type="submit">Submit</SubmitButton>
-            </StyledForm>
+            {({ setFieldValue, values }) => {
+              return (
+                <StyledForm>
+                  <StyledField
+                    id="name"
+                    name="name"
+                    placeholder="Name *"
+                    type="text"
+                  />
+                  <StyledField
+                    id="email"
+                    name="email"
+                    placeholder="Email *"
+                    type="email"
+                  />
+                  <StyledField
+                    id="number"
+                    name="number"
+                    placeholder="Phone number *"
+                    type="tel"
+                  />
+                  <Details>Property details</Details>
+                  <DetailsContainer>
+                    <FormSelect
+                      id="city"
+                      name="city"
+                      placeholder="City *"
+                      options={locationData.map((data) => ({
+                        value: data.location,
+                        label: data.location,
+                      }))}
+                      value={values.city}
+                      onChange={(value) => setFieldValue("city", value)}
+                    />
+                    <FormSelect
+                      id="area"
+                      name="area"
+                      placeholder="Area *"
+                      options={regions[values.city.value] || []}
+                      value={values.area}
+                      onChange={(value) => setFieldValue("area", value)}
+                    />
+                  </DetailsContainer>
+                  <FormSelect
+                    id="bedrooms"
+                    name="bedrooms"
+                    placeholder="# of bedrooms *"
+                    options={[
+                      { value: 1, label: "1 bedroom" },
+                      { value: 2, label: "2 bedrooms" },
+                      { value: 3, label: "3 bedrooms" },
+                      { value: 4, label: "4 bedrooms" },
+                      { value: 5, label: "5 bedrooms" },
+                    ]}
+                    value={values.bedrooms}
+                    onChange={(value) => setFieldValue("bedrooms", value)}
+                  />
+                  <SubmitButton type="submit" text="Submit" />
+                </StyledForm>
+              );
+            }}
           </Formik>
         </FormBox>
       </BcgImage>
@@ -90,17 +99,11 @@ export const LandloardsForm = () => {
   );
 };
 
-const SubmitButton = styled.button`
-  border-radius: 40px;
-  background: #064749;
-  border: none;
-  padding: 12px 40px;
-  color: #fff;
-  font-size: 18px;
+const SubmitButton = styled(Button)`
   width: 158px;
-  height: 48px;
   align-self: center;
 `;
+
 const StyledField = styled(Field)`
   border-radius: 12px;
   padding: 16px 20px;

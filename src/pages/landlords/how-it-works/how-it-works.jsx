@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import styled from "styled-components";
 import { HowItWorksCard } from "./how-it-works-card";
 import emailIcon from "../../../assets/eva_email-fill.svg";
@@ -13,18 +14,18 @@ export const HowItWorks = () => {
       <Title>How it Works</Title>
       <CardContainer>
         {howItWorksData.map((data, index) => (
-          <>
+          <Fragment key={index}>
             <HowItWorksCard
-              key={index}
               iconSrc={data.iconSrc}
               text1={data.text1}
               text2={data.text2}
+              isLast={index === howItWorksData.length - 1}
             />
             <div></div>
             <div></div>
-          </>
+          </Fragment>
         ))}
-        <Line />
+        {/* <Line /> */}
       </CardContainer>
     </Container>
   );

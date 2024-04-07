@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-export const Button = ({ text }) => {
+export const Button = ({ text, className, ...rest }) => {
   return (
-    <GreenButton type="button">
-      <div> {text}</div>
+    <GreenButton className={className} type="button" {...rest}>
+      {text}
     </GreenButton>
   );
 };
@@ -15,4 +15,5 @@ const GreenButton = styled.button`
   padding: 12px 40px;
   color: #fff !important;
   font-size: 18px;
+  cursor: pointer;
 `;
