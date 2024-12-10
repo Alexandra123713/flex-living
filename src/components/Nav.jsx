@@ -6,29 +6,25 @@ export const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <div>
-      <Nav>
-        <Logo>
-          <Img src={logo} />
-        </Logo>
-        <MenuList>
-          <MenuItem>
-            <NavLink onClick={() => navigate("/")}>Home</NavLink>
-          </MenuItem>
-          <MenuItem>
-            <NavLink onClick={() => navigate("/landloards")}>
-              Landloards
-            </NavLink>
-          </MenuItem>
-          <MenuItem>
-            <NavLink onClick={() => navigate("/")}>Blog</NavLink>
-          </MenuItem>
-          <MenuItem>
-            <NavLink onClick={() => navigate("/")}>Contacts</NavLink>
-          </MenuItem>
-        </MenuList>
-      </Nav>
-    </div>
+    <Nav>
+      <Logo>
+        <Img src={logo} />
+      </Logo>
+      <MenuList>
+        <MenuItem>
+          <NavLink onClick={() => navigate("/")}>Home</NavLink>
+        </MenuItem>
+        <MenuItem>
+          <NavLink onClick={() => navigate("/landloards")}>Landloards</NavLink>
+        </MenuItem>
+        <MenuItem>
+          <NavLink onClick={() => navigate("/")}>Blog</NavLink>
+        </MenuItem>
+        <MenuItem>
+          <NavLink onClick={() => navigate("/")}>Contacts</NavLink>
+        </MenuItem>
+      </MenuList>
+    </Nav>
   );
 };
 
@@ -38,9 +34,10 @@ const Img = styled.img`
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
-  padding-left: 60px;
-  padding-right: 60px;
-  margin: 12px 0;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  background-color: white;
 `;
 const Logo = styled.div`
   width: 130px;
@@ -53,6 +50,7 @@ const Logo = styled.div`
 const MenuList = styled.ul`
   display: flex;
   gap: 40px;
+  margin-right: 2rem;
 `;
 const MenuItem = styled.li`
   list-style-type: none;

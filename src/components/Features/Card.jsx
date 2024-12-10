@@ -18,6 +18,7 @@ export const CardContainer = styled.div`
   align-items: flex-start;
   gap: 16px;
   border-radius: 30px;
+  background-color: rgb(226, 241, 232);
 `;
 
 const Text1 = styled.div`
